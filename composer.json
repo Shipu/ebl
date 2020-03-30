@@ -1,0 +1,39 @@
+{
+    "name": "shipu/ebl",
+    "type": "library",
+    "require": {
+        "php": ">=5.6",
+        "nahid/apiz": "3.1.*",
+        "vlucas/phpdotenv": "^3.4"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shipu Ahamed",
+            "email": "shipuahamed01@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Shipu\\Ebl\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shipu\\Ebl\\EblServiceProvider"
+            ],
+            "aliases": {
+                "PortWallet": "Shipu\\Ebl\\Facades\\Ebl"
+            }
+        }
+    }
+}
